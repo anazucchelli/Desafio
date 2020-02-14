@@ -77,6 +77,7 @@ public class DigitalHouseManager {
             System.out.println("Não existe vaga disponível!");
         }
 
+        return null;
     }
 
     public void alocarProfessores(Integer codigoCurso, Integer codigoProfessorTitular, Integer codigoProfessorAdjunto){
