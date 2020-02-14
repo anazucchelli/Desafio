@@ -1,17 +1,50 @@
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Curso{
+public class Curso extends Aluno{
     public Integer numeroCurso;
     public String nome;
     public ProfessorTitular professorTitular;
     public ProfessorAdjunto professorAdjunto;
     public Integer quantMaxAlunos;
-    public List<Aluno> listaAlunos;
+    List<Aluno> listaAlunos = new ArrayList<>();
 
 
     public Curso() {
     }
+
+
+    public Curso(Integer numeroCurso, String nome, ProfessorTitular professorTitular, ProfessorAdjunto professorAdjunto, Integer quantMaxAlunos, List<Aluno> listaAlunos) {
+        this.numeroCurso = numeroCurso;
+        this.nome = nome;
+        this.professorTitular = professorTitular;
+        this.professorAdjunto = professorAdjunto;
+        this.quantMaxAlunos = quantMaxAlunos;
+        this.listaAlunos = listaAlunos;
+    }
+
+    public Curso(Integer numeroCurso, String nome, Integer quantMaxAlunos) {
+        this.numeroCurso = numeroCurso;
+        this.nome = nome;
+        this.quantMaxAlunos = quantMaxAlunos;
+    }
+
+    public boolean adicionarUmAluno(Aluno umAluno){
+        if(listaAlunos.size() < quantMaxAlunos){
+            listaAlunos.add(umAluno);
+            System.out.println("Aluno adicionado com sucesso!"+ umAluno.getNome());
+            return true;
+    }else{
+            System.out.println("Não há vagas disponíveis");
+            return false;
+        }
+    }
+
+    public void excluirAluno(Aluno umAluno){
+        listaAlunos.remove(umAluno);
+    }
+
 
 
     @Override
@@ -74,4 +107,6 @@ public class Curso{
     public void setListaAlunos(List<Aluno> listaAlunos) {
         this.listaAlunos = listaAlunos;
     }
+
+
 }

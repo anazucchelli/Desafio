@@ -1,7 +1,7 @@
-public class ProfessorAdjunto {
+public class ProfessorAdjunto extends Professor {
     public Integer quantidadeHoras;
 
-    public ProfessorAdjunto() {
+    public ProfessorAdjunto(String nome, Integer codigoProfessor, String sobrenome, Integer quantidadeDeHoras) {
     }
 
     public Integer getQuantidadeHoras() {

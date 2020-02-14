@@ -8,7 +8,8 @@ public class Matricula {
     public Matricula(Aluno aluno, Curso curso) {
         this.aluno = aluno;
         this.curso = curso;
-
-        Date dataMatricula = new Date();
+        this.dataMatricula = new Date();
     }
+
+
 }

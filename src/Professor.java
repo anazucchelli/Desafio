@@ -13,6 +13,11 @@ public class Professor {
         this.tempoCasa = tempoCasa;
     }
 
+    public Professor() {
+
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

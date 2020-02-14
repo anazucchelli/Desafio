@@ -5,10 +5,16 @@ public class Aluno {
     private String nome;
     private String sobrenome;
 
-    public Aluno(Integer numeroAluno, String nome, String sobrenome) {
+    public Aluno() {
         this.numeroAluno = numeroAluno;
         this.nome = nome;
         this.sobrenome = sobrenome;
+    }
+
+    public Aluno(String nome, String sobrenome, Integer codigoAluno) {
+    }
+
+    public Aluno(Integer codigoAluno, Integer codigoCurso) {
     }
 
     @Override
@@ -24,9 +30,10 @@ public class Aluno {
         return Objects.hash(numeroAluno);
     }
 
-    public Integer getNumeroAluno(int i) {
+    public Integer getNumeroAluno() {
         return numeroAluno;
     }
+
     public void setNumeroAluno(Integer numeroAluno) {
         this.numeroAluno = numeroAluno;
     }
@@ -34,6 +41,7 @@ public class Aluno {
     public String getNome() {
         return nome;
     }
+
     public void setNome(String nome) {
         this.nome = nome;
     }
@@ -41,7 +49,12 @@ public class Aluno {
     public String getSobrenome() {
         return sobrenome;
     }
+
     public void setSobrenome(String sobrenome) {
         this.sobrenome = sobrenome;
     }
+
 }
+
+
+
