@@ -1,14 +1,18 @@
+import java.util.List;
 import java.util.Objects;
 
-public class Curso {
+public class Curso{
     public Integer numeroCurso;
     public String nome;
+    public ProfessorTitular professorTitular;
+    public ProfessorAdjunto professorAdjunto;
+    public Integer quantMaxAlunos;
+    public List<Aluno> listaAlunos;
 
 
-    public Curso(Integer numeroCurso, String nome) {
-        this.numeroCurso = numeroCurso;
-        this.nome = nome;
+    public Curso() {
     }
+
 
     @Override
     public boolean equals(Object o) {
@@ -37,5 +41,37 @@ public class Curso {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public ProfessorTitular getProfessorTitular() {
+        return professorTitular;
+    }
+
+    public void setProfessorTitular(ProfessorTitular professorTitular) {
+        this.professorTitular = professorTitular;
+    }
+
+    public ProfessorAdjunto getProfessorAdjunto() {
+        return professorAdjunto;
+    }
+
+    public void setProfessorAdjunto(ProfessorAdjunto professorAdjunto) {
+        this.professorAdjunto = professorAdjunto;
+    }
+
+    public Integer getQuantMaxAlunos() {
+        return quantMaxAlunos;
+    }
+
+    public void setQuantMaxAlunos(Integer quantMaxAlunos) {
+        this.quantMaxAlunos = quantMaxAlunos;
+    }
+
+    public List<Aluno> getListaAlunos() {
+        return listaAlunos;
+    }
+
+    public void setListaAlunos(List<Aluno> listaAlunos) {
+        this.listaAlunos = listaAlunos;
     }
 }
